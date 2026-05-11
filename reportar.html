@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine | Reporte de Captura</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo-marina.png" alt="Logo Marina" id="logo">
+            <h1>MARINE</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="objetivos.html">Objetivos Activos</a></li>
+                <li><a href="muro-honor.html">Muro de Honor</a></li>
+                <li><a href="reportar.html" class="active">Informar Captura</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="form-header">
+                <h2>Formulario Oficial de Captura</h2>
+                <p class="warning-text">ADVERTENCIA: La emisión de reportes falsos a la Marina será penada con reclusión en Impel Down.</p>
+            </div>
+
+            <form action="https://formspree.io/f/mnjwlnjg" method="POST" class="marine-form">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre y Rango del Agente / Cazarrecompensas:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Capitán Smoker / Cazador CH-742" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Den Den Mushi de Contacto (Email):</label>
+                    <input type="email" id="email" name="email" placeholder="agente@marine.gov" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="objetivo">Objetivo Capturado (Busque en la base de datos):</label>
+                    <input type="text" id="objetivo" name="objetivo" list="piratas-buscados" placeholder="Escriba el nombre del pirata..." required>
+                    
+                    <datalist id="piratas-buscados">
+                        <option value="Monkey D. Luffy">
+                        <option value="Roronoa Zoro">
+                        <option value="Nami (Gata Ladrona)">
+                        <option value="Usopp (God Usopp)">
+                        <option value="Sanji (Pierna Negra)">
+                        <option value="Nico Robin (Niña Demonio)">
+                        <option value="Buggy el Payaso">
+                        <option value="Trafalgar D. Water Law">
+                        <option value="Eustass Kid">
+                    </datalist>
+                </div>
+
+                <div class="form-group">
+                    <label for="comprobante">Adjuntar Prueba Fotográfica (Comprobante):</label>
+                    <input type="file" id="comprobante" name="comprobante" accept="image/png, image/jpeg, application/pdf" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Detalles de la operación y coordenadas:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa cómo fue la captura y la ubicación actual del sujeto..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Transmitir al Cuartel General</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cuartel general de la Marina - División de Inteligencia Naval.</p>
+    </footer>
+
+</body>
+</html>
