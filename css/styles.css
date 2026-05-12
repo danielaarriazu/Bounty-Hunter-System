@@ -325,6 +325,49 @@ header {
     color: #777;
 }
 
+/* --- ESTILO PARA PIRATAS MUERTOS --- */
+
+/* 1. Preparamos el contenedor y apagamos el fondo del papel */
+.card-wanted.muerto {
+    position: relative;
+    overflow: hidden;
+    background-color: #b0a99f; /* Un tono pergamino mucho más gris y apagado */
+    border-color: #222; /* Borde casi negro */
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6); /* Sombra más oscura y pesada */
+}
+
+/* 2. Modificamos el color del texto de todo el cartel para que se vea opaco */
+.card-wanted.muerto .wanted-header,
+.card-wanted.muerto .wanted-sub,
+.card-wanted.muerto .wanted-name,
+.card-wanted.muerto .wanted-footer {
+    color: #333; 
+    opacity: 0.8;
+}
+
+/* 3. Tachamos la recompensa (ya no se puede cobrar) */
+.card-wanted.muerto .wanted-bounty {
+    text-decoration: line-through;
+    color: #444;
+    opacity: 0.7;
+}
+
+/* 4. El Sello Negro (Aprovecha la estructura de .status-stamp pero pisa los colores) */
+.card-wanted.muerto .status-stamp {
+    color: #111111; /* Negro puro */
+    border-color: #111111;
+    background-color: rgba(200, 200, 200, 0.75); /* Fondo grisáceo semi-transparente */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 5. Apagamos completamente la foto */
+.card-wanted.muerto .wanted-image img {
+    /* grayscale(1) lo hace 100% blanco y negro */
+    /* brightness(0.7) lo oscurece */
+    filter: grayscale(1) brightness(0.7) contrast(1.2); 
+    opacity: 0.6; /* Lo hace ver desvanecido */
+}
+
 /* --- RESEÑAS GRID --- */
 .resenas-grid {
     display: grid;
