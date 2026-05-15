@@ -261,10 +261,11 @@ header {
 }
 
 .wanted-image img {
-   width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 15%;
+    object-position: center top;
     filter: sepia(0.4) contrast(1.2);
 }
 
@@ -362,7 +363,7 @@ header {
 
 /* --- ESTILO PARA PIRATAS MUERTOS --- */
 
-/* 1. Preparamos el contenedor y apagamos el fondo del papel */
+/* 1. Apagamos el fondo del papel */
 .card-wanted.muerto {
     position: relative;
     overflow: hidden;
@@ -371,7 +372,7 @@ header {
     box-shadow: 5px 5px 10px rgba(0,0,0,0.6); 
 }
 
-/* 2. Modificamos el color del texto de todo el cartel para que se vea opaco */
+/* 2. Texto de todo el cartel opaco */
 .card-wanted.muerto .wanted-header,
 .card-wanted.muerto .wanted-sub,
 .card-wanted.muerto .wanted-name,
@@ -380,7 +381,7 @@ header {
     opacity: 0.8;
 }
 
-/* 3. Tachamos la recompensa (ya no se puede cobrar) */
+/* 3. Recompenza tachada */
 .card-wanted.muerto .wanted-bounty {
     text-decoration: line-through;
     color: #444;
@@ -526,6 +527,7 @@ header {
 
 .datos-rapidos {
     font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
     color: #002d5a;
 }
 
