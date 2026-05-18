@@ -264,7 +264,6 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 15%;
     object-position: center top;
     filter: sepia(0.4) contrast(1.2);
 }
@@ -640,6 +639,54 @@ header {
     color: #002d5a;
 }
 
+/* Contenedor general para páginas secundarias */
+.container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* Títulos de sección (usado en Muro de Honor y expedientes) */
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    color: var(--azul-marine);
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Botón de retroceso en los expedientes */
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--azul-marine);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background-color: var(--dorado);
+    color: var(--azul-marine);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--azul-marine);
+    color: var(--blanco);
+    border-top: 4px solid var(--dorado);
+    font-family: 'Special Elite', cursive;
+    margin-top: 40px; 
+}
 
 @media (max-width: 768px) {
     /* Encabezado general */
@@ -647,7 +694,10 @@ header {
     .nav-links { margin-top: 15px; flex-direction: column; gap: 10px; }
     
     /* Inicio (Hero) */
-    .hero-title { font-size: 2.2rem; }
+    .hero-title { 
+        font-size: 1.8rem; 
+        overflow-wrap: break-word; 
+    }
     .hero-actions { flex-direction: column; }
     .hero-stats { flex-direction: column; gap: 30px; }
     .hero-content { padding: 30px 20px; }
