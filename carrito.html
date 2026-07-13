@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine | Sistema Central</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo-marina.png" alt="Logo Marina" id="logo">
+            <h1>MARINE</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="objetivos.html">Objetivos Activos</a></li>
+                <li><a href="muro-honor.html">Muro de Honor</a></li>
+                <li><a href="reportar.html">Informar Captura</a></li>
+                <li><a href="carrito.html">🛒 Carrito <span id="contador-carrito" style="background-color: var(--rojo-alerta); color: white; padding: 2px 6px; border-radius: 50%; font-size: 0.8rem;">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="seccion-carrito" style="max-width: 800px; margin: 40px auto; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border: 2px solid var(--azul-marine); border-radius: 8px;">
+            <h2 class="section-title" style="text-align: center; color: var(--azul-marine);">Carrito Actual</h2>
+            <div id="lista-carrito" style="margin-top: 20px;">
+            </div>
+            <div style="margin-top: 30px; border-top: 3px solid var(--rojo-alerta); padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="font-size: 1.5rem; color: var(--azul-marine);">Total a Pagar:</h3>
+                <h3 id="total-carrito" style="font-size: 1.8rem; color: var(--rojo-alerta);">฿ 0</h3>
+            </div>
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="btn-enviar" onclick="simularCompra()" style="font-size: 1.2rem; padding: 15px 30px;">
+                    Confirmar y Solicitar
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cuartel general de la Marina - Cipher Pol.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
